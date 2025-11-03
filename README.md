@@ -54,28 +54,32 @@ carv_l2e provides a **simple, AI-assisted portal** that connects users with ques
 ## ⚙️ Setup & Installation
 
 ### 1️⃣ Clone the repo
-```bash
+```
 git clone https://github.com/Mmdyz/carv-learn-to-earn-solana.git
 cd carv-learn-to-earn-solana
+```
 
 ###2️⃣ Install dependencies
 npm install
 
-3️⃣ Configure environment variables
+###3️⃣ Configure environment variables
 
 Create a .env.local file:
+```
 
 NEXT_PUBLIC_RPC_URL=https://rpc.carv.testnet.soo.network/rpc/carv-McPrlbfMcW0ggpkvr07Tjs2YfviwpHaI
 NEXT_PUBLIC_NETWORK=testnet
 NEXT_PUBLIC_APP_NAME=CARV-Learn-To-Earn
+```
 
-4️⃣ Run the app
+###4️⃣ Run the app
+```
 npm run dev
 
 
 Visit: http://localhost:3000
-
-☁️ Deployment
+```
+###☁️ Deployment
 Deploy to Vercel
 
 Push your repo to GitHub
@@ -88,7 +92,7 @@ Add your .env.local variables
 
 Click Deploy
 
-🧩 Features
+###🧩 Features
 
 Learning Quests — Complete tasks, log progress, and learn CARV SVM.
 
@@ -100,7 +104,7 @@ Mentor Chat — AI assistant for CARV ecosystem guidance.
 
 Wallet Integration — Solana wallet connect via Phantom or Solflare.
 
-🛠 Future Enhancements
+###🛠 Future Enhancements
 
 On-chain quest verification
 
@@ -110,7 +114,7 @@ Integrated reward claim flow
 
 CARV AgentKit-powered learning AI
 
-📜 License
+###📜 License
 
 MIT License © 2025 CARV Learn-to-Earn Team
 
