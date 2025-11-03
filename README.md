@@ -111,7 +111,7 @@ Swap Widget — Token swap interface (CARV ↔ USDT).
 
 Mentor Chat — AI assistant for CARV ecosystem guidance.
 
-Wallet Integration — Solana wallet connect Backpack Recomeded
+Wallet Integration — Solana wallet connect(SVM CHAIN) Backpack Recomended
 
 ---
 
