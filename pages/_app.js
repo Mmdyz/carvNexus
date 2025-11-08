@@ -47,7 +47,7 @@ export default function MyApp({ Component, pageProps }) {
         <h2 style={{ fontSize: "1.2rem", lineHeight: "1.6" }}>
           🚫 CARV NEXUS is optimized for desktop browsers.
           <br />
-          Please switch to a larger screen to access your dashboard.
+          Please switch to desktop site to access your dashboard.
         </h2>
       </div>
     );
