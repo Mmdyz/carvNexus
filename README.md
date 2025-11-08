@@ -1,72 +1,60 @@
-# 🧭 carv_learn_to_earn — Your AI Guide to On-Chain Adventures
+# 🚀 CARV NEXUS  — Your AI Guide to On-Chain Adventures
 
-A decentralized Learn-to-Earn dApp built on the **CARV SVM testnet**, combining Web3 onboarding, quests, and DeFi features into one seamless experience. 
-It helps users **discover, complete, and record Web3 tasks** — all linked to their **CARV ID** via **CARV AgentKit**.  
+## **CARV NEXUS** is a next-generation **Learn-to-Earn ecosystem hub** built on the **CARV SVM Chain**, designed to onboard users into Web3 through **interactive learning, community engagement, and on-chain participation**. 
 This project is built for the [CARV Community Hackathon](https://docs.carv.io/hackathon).
+---
+
+## 🌐 Vision
+
+To make **Web3 onboarding** seamless, fun, and rewarding.  
+CARV NEXUS empowers users to explore decentralized ecosystems while earning rewards, building reputation, and discovering top dApps on the CARV chain.
 
 ---
 
-## 🌐 Live Demo
-👉 [Coming soon on Vercel](https://vercel.com)
+## 💡 Core Features
+
+### 🔗 **Top Dapps on SVM Chain**
+Discover trending decentralized apps within the CARV ecosystem — sorted by real-time votes, community metrics, and engagement levels.
+
+### 🧠 **Learn-to-Earn Missions**
+Complete quests, answer questions, and explore topics ranging from DePIN to AI Agents. Earn XP, badges, and token rewards as you learn.
+
+### 🧭 **On-Chain Activity Tracker**
+Track wallet interactions, transaction stats, and protocol usage. See your on-chain footprint grow as you explore new dApps.
+
+### 💬 **Community Hub**
+Join discussions, share insights, and contribute to ecosystem development — all within a unified CARV-powered social layer.
+
+### 🚀 **Submit Your Project**
+Launch your own dApp or tool on CARV SVM and gain instant visibility within the NEXUS ecosystem.
 
 ---
 
-## 💡 Overview
+## 🛠️ Tech Stack
 
-Web3 has countless quests — from testnet missions to community campaigns — but discovery and tracking are fragmented.  
-CARV Quest solves this by creating a **unified, intelligent quest hub** where an **AI CARV Agent** helps users:
-
-- 🔍 Discover relevant quests  
-- 🧩 Track progress & completions  
-- 🪪 Link activity to their CARV ID  
-- 🌐 Log proof-of-participation on **CARV SVM**
-
-> *A Sovereign AI layer guiding your on-chain growth.*
-
----
-
-## 🎯 Problem Statement
-
-Web3 lacks a cohesive experience for users to **explore quests, verify participation**, and **build on-chain reputation**.  
-Most campaigns are scattered across Discords, Twitter threads, and external platforms.
-
----
-
-## 🚀 Solution
-
-carv_l2e provides a **simple, AI-assisted portal** that connects users with quests and verifies completions directly on-chain.
-
-| Function | Description |
-|-----------|--------------|
-| **AI Quest Finder** | Suggests trending quests using AgentKit prompts |
-| **Quest Tracker** | Logs user progress (Started → Completed) |
-| **On-Chain Proof** | Writes verified completions to CARV SVM |
-| **CARV ID Integration** | Links actions to reputation & XP |
-| **Leaderboard** | Displays top contributors |
-
----
-
-## 🧱 Tech Stack
-- **Next.js 16** — Frontend framework  
-- **TailwindCSS** — Styling  
-- **Solana Web3.js** — Blockchain interactions  
-- **CARV SVM RPC** — On-chain connectivity  
-- **Axios** — API communication  
-- **Vercel** — Deployment
+- **Frontend:** Next.js + React + TailwindCSS  
+- **UI Components:** shadcn/ui + framer-motion  
+- **Blockchain Integration:** CARV SVM Chain APIs + Wallet Adapter  
+- **Data Storage:** IPFS / CARV SDK  
+- **Backend:** Node.js + Supabase 
 
 ---
 
 ## ⚙️ Setup & Installation
 
 ## 1️⃣ Clone the repo
+
 ```
-git clone https://github.com/Mmdyz/carv-learn-to-earn-solana.git
-cd carv-learn-to-earn-solana
+git clone https://github.com/Mmdyz/carvNexus.git
+
+cd carv-nexus
+
 ```
 
 ## 2️⃣ Install dependencies
+```
 npm install
-
+```
 ## 3️⃣ Configure environment variables
 
 Create a .env.local file:
@@ -101,23 +89,7 @@ Click Deploy
 
 ---
 
-## 🧩 Features
-
-Learning Quests — Complete tasks, log progress, and learn CARV SVM.
-
-Leaderboard — Displays top builders.
-
-Swap Widget — Token swap interface (CARV ↔ USDT).
-
-Mentor Chat — AI assistant for CARV ecosystem guidance.
-
-Wallet Integration — Solana wallet connect(SVM CHAIN) Backpack Recomended
-
----
-
 ## 🛠 Future Enhancements
-
-On-chain quest verification
 
 Dynamic leaderboard from CARV SVM explorer
 
