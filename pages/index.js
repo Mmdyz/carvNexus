@@ -102,7 +102,7 @@ export default function Home() {
 
   return (
     <div
-    className="min-h-screen text-gray-100 p-6 bg-cover bg-center"
+    className="min-h-screen bg-[#070b14] text-gray-100 p-6"
     style={{
       backgroundImage: "url('/images/darkmode.jpg')",
     }}
