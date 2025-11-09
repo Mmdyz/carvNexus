@@ -113,7 +113,7 @@ export default function Home() {
         <img
           src="/images/logo.png"
           alt="CARV NEXUS Logo"
-          className="w-100 h-20 object-contain "
+          className="w-50 h-20 object-contain "
         />
       
        <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent ">

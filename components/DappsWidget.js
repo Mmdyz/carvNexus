@@ -1,3 +1,4 @@
+// components/DappsWidget.js
 import axios from "axios";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useState, useEffect } from "react";
@@ -22,38 +23,32 @@ export default function DappsWidget() {
     fetchVotes();
   }, []);
 
-  const fetchVotes = async () => {
-    try {
-      const res = await axios.get("/api/vote");
-      const data = res.data || {};
-      const voteCounts = Object.fromEntries(
-        Object.entries(data).map(([dapp, info]) => [dapp, info.count])
-      );
-      setVotes(voteCounts);
-    } catch (err) {
-      toast.error("Failed to load votes", err);
-    }
-  };
+ const fetchVotes = async () => {
+  try {
+    const res = await axios.get("/api/vote");
+    setVotes(res.data);
+  } catch {
+    toast.error("Failed to load votes");
+  }
+};
 
-  const handleUpvote = async (dapp) => {
-    if (!wallet.publicKey)
-      return alert("Connect your wallet before voting!");
+const handleUpvote = async (dapp) => {
+  if (!wallet.publicKey)
+    return toast.error("Connect your wallet before voting!");
 
-    const walletAddr = wallet.publicKey.toBase58();
-    try {
-      const res = await axios.post("/api/vote", { dapp, wallet: walletAddr });
-      const newCount = res.data.votes;
-      setVotes((prev) => ({ ...prev, [dapp]: newCount }));
+  const walletAddr = wallet.publicKey.toBase58();
+  try {
+    await axios.post("/api/vote", { dapp, wallet: walletAddr });
+    toast.success("Vote recorded successfully!");
+    fetchVotes();
+  } catch (err) {
+    const msg = err.response?.data?.message;
+    if (msg === "Already voted")
+      toast("You’ve already voted for this dApp!");
+    else toast.error("Vote failed, please try again later.");
+  }
+};
 
-      // Pulse animation
-      setAnimate((prev) => ({ ...prev, [dapp]: true }));
-      setTimeout(() => setAnimate((prev) => ({ ...prev, [dapp]: false })), 400);
-    } catch (err) {
-      if (err.response?.data?.message === "Already voted")
-        toast("You’ve already voted for this dApp!");
-      else toast("Vote failed, please try again later.");
-    }
-  };
 
 
   const dapps = [
