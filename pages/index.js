@@ -16,6 +16,7 @@ import ThemeToggle from "../components/ThemeToggle";
 import EleshaAvatar from "../components/EleshaAvater";
 import { supabase } from "../lib/supabase";
 import LeaderboardWidget from "../components/LeaderboardWidget";
+import Head from "next/head";
 
 export default function Home() {
   const [quests, setQuests] = useState([]);
@@ -101,10 +102,14 @@ export default function Home() {
     setAccount(data);
   }
 
-  async function handleAsk(prompt) {
-    const res = await axios.post("/api/mentor", { prompt });
-    setAiReply(res.data.reply || "No reply");
-  }
+  const handleAsk = async (prompt) => {
+  return await fetch("/api/elesha", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt }),
+  }).then((res) => res.json());
+};
+
 
   async function handleComplete(questId) {
     try {
